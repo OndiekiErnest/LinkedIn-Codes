@@ -8,7 +8,7 @@ data = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
 # get the squares of numbers that are divisible by 2
 # much harder to read
-even_squares = map(lambda x: x**2, filter(lambda x: x % 2 == 0, data))
+even_squares = list(map(lambda x: x**2, filter(lambda x: x % 2 == 0, data)))
 print(even_squares)
 # Output: [4, 16, 36, 64, 100]
 
