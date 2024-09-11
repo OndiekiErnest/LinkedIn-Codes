@@ -12,12 +12,15 @@ stock = {
 }
 
 # get how many tenths there are in stock counts
+# using dict comprehensions
 tenths = {name: tenth for name, count in stock.items() if (tenth := count // 10) > 0}
 print(tenths)
 
-tenths = {}
+# using traditional loops
+# the following code is the same as the code above
+tenths = {}  # create an empty dict
 for name, count in stock.items():
     if (tenth := count // 10) > 0:
-        tenths[name] = tenth
+        tenths[name] = tenth  # add pairs to dict
 
 print(tenths)
